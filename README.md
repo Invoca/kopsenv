@@ -48,7 +48,6 @@ Currently kopsenv supports the following OSes, on x86-64 bit archtecture only:
 
 ### kopsenv install [version]
 
-
 **IMPORTANT:** Be sure to run `brew uninstall kops` before installing kopsenv
 
 Install a specific version of Kops. Available options for version:
