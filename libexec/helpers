@@ -27,10 +27,6 @@ function curlw () {
 
 kops_platform() {
   local arch
-  case "$(uname -m)" in
-    x86_64) arch='amd64';;
-    *)      error_and_die "Unrecognized/unsupported architecture $(uname -m)";;
-  esac
   local os
   case "$(uname -s)" in
     Darwin*)                      os="darwin";;
