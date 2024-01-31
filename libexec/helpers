@@ -27,6 +27,10 @@ function curlw () {
 
 kops_platform() {
   local arch
+      case "$(uname -m)" in
+      x86_64) arch='amd64';;
+      *) arch='arm64';;
+    esac
   local os
   case "$(uname -s)" in
     Darwin*)                      os="darwin";;
