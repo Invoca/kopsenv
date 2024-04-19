@@ -37,12 +37,12 @@ if [ -f "${dst_path}/kops" ]; then
   exit 0
 fi
 
+exe_name="kops-$(kops_platform)"
+
 # Check if version_requested contains "invoca", and if does, get version from the Invoca Kops fork
 if [[ "${version_requested}" =~ "invoca" ]]; then
-  exe_name="kops"
   version_url="https://github.com/Invoca/kops/releases/download/${version}"
 else
-  exe_name="kops-$(kops_platform)"
   version_url="https://github.com/kubernetes/kops/releases/download/${version}"
 fi
 
